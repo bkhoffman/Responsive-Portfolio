@@ -12,7 +12,7 @@ body {
 
 /* general */
 
-.container {
+.container-fluid {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -54,6 +54,7 @@ h3 {
 
 #masthead {
   position: fixed;
+  padding: 0 20px;
   z-index: 99;
   width: 100%;
   margin: 0 0 30px;
@@ -129,7 +130,7 @@ h3, h2 {
   width: 100%;
   max-width: 960px;
   padding: 30px;
-  margin: 0 0 40px;
+  margin: 0 0 40px 15px;
   background: #ffffff;
   border: 1px solid #dddddd;
 }
@@ -214,4 +215,85 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
+}
+
+/*media queries*/
+@media screen and (max-width: 980px) {
+  #main-container {
+    width: 650px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #masthead {
+    position: static;
+  }
+  #main-container {
+    width: 100%;
+    padding-top: 0px;
+  }
+  .container {
+    margin: 0px;
+    width: 100%;
+    max-width: 728px;
+  }
+  .work {
+    width: 313px; 
+  }
+  #catImg{
+    width: 50%;
+  }
+  footer {
+    padding: 0px 0;
+    height: 60px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+  #masthead {
+    position: static;
+    padding: 0;
+  }
+  nav {
+    display: block;
+    text-align: center;
+    float: none;
+    margin: 0;
+    padding: 110px 0 20px 0; 
+  }
+  #logo{ 
+    width: 100%;
+  }
+  #main-container {
+    width: 100%;
+    padding-top: 0px;
+  }
+  .container {
+    margin: 0px;
+    width: 100%;
+    max-width: 640px;
+  }
+  .main-section{
+    margin:auto;
+  }
+  #catImg{
+    width: 100%;
+  }
+
+  footer {
+    padding: 0px 0;
+    height: 60px;
+  }
+
+  .work{
+    float: none;
+    width: 100%;
+  }
+  .work:nth-child(even) {
+    margin: 0;
+  }
 }
